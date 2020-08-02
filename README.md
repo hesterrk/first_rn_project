@@ -41,3 +41,25 @@ First React Native Project. This project attempts to copy and design and functio
 :scan the barcode on laptop 
 :shake device to bring up menu
 
+--Network images: pass an object instead of require function
+:use {uri: "link"}
+:have to manually specify the dimensions as the require function reads the metadata about our images
+:in the object, use width and source
+source = {{
+    width:
+    source:
+    uri: 
+}}
+:useful prop -> loadingIndicatorSource, renders a local image (using require func) displayed until the image is ready to be displayed usually after its downloaded from network
+:fadeDuration (only supported in android ) 
+
+--Touchables (tap on things in the display)
+:can make any component touchable, wrap the component we want to make touchable within the touchable component we choose
+:TouchableWithoutFeedBack -> has event onPress, this gives us no visual feedback to user, use sparingly 
+:TouchableOpacity -> when you press it reduces opcaity for short time
+:TouchableHighlight -> background gets darker for short second
+:TouchbableNativeFeedback -> supported for android only 
+
+--Alert function to display a message to the user 
+:customise alert message by importing the 'Alert' API which has methods (alert, prompt) on it
+:pass this into onPress props
