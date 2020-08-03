@@ -14,10 +14,9 @@ import { Ionicons } from "@expo/vector-icons";
 // Direct message icon needs to be a button thats clickable and renders another component
 // Camera should be where you can upload a picture
 
-export default function HeaderBar() {
+export default function HeaderBar({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-
       <View style={styles.titleContainer}>
         <View style={styles.imageContainer}>
           <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
@@ -26,7 +25,7 @@ export default function HeaderBar() {
           <Text style={styles.mainTitle}>ReaNactInsta</Text>
         </View>
         {/* Need an Onlick here to render MessageContainer component */}
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("MessageBar")}>
           <View style={styles.iconContainer}>
             <Ionicons name="md-send" size={30} color="black" />
           </View>
