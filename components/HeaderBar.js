@@ -22,7 +22,7 @@ export default function HeaderBar({ navigation }) {
           <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
         </View>
         <View style={styles.mainTextContainer}>
-          <Text style={styles.mainTitle}>ReaNactInsta</Text>
+          <Text style={styles.mainTitle}>Rea-Nat-Insta</Text>
         </View>
         {/* Need an Onlick here to render MessageContainer component */}
         <TouchableOpacity onPress={() => navigation.navigate("MessageBar")}>
