@@ -63,3 +63,7 @@ source = {{
 --Alert function to display a message to the user 
 :customise alert message by importing the 'Alert' API which has methods (alert, prompt) on it
 :pass this into onPress props
+
+--React Navigation library 
+
+:NavigationContainer is a component which manages our navigation tree and contains the navigation state, this component must wrap all navigators structure
