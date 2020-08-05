@@ -1,7 +1,5 @@
 import "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View } from "react-native";
 import HeaderBar from "./components/HeaderBar";
 import MessageBar from "./components/MessageBar";
 import { NavigationContainer } from "@react-navigation/native";

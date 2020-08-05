@@ -15,12 +15,18 @@ import { Ionicons } from "@expo/vector-icons";
 export default function MessageBar({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.messageContainer}>
+      <View style={styles.backContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <View style={styles.iconContainer}>
             <Ionicons name="ios-arrow-back" size={30} color="black" />
           </View>
         </TouchableOpacity>
+      </View>
+      <View>
+        <Ionicons name="ios-videocam" size={30} color="black" />
+          </View>
+          <View>
+        <Ionicons name="md-clipboard" size={30} color="black" />
       </View>
     </SafeAreaView>
   );
@@ -32,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
 
-  messageContainer: {
+  backContainer: {
     backgroundColor: "#F7F8F8",
     flexDirection: "row",
     // Fixed border
