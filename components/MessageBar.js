@@ -17,17 +17,33 @@ export default function MessageBar({ navigation }) {
     <SafeAreaView style={styles.container}>
       <View style={styles.backContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <View style={styles.iconContainer}>
+          <View style={styles.back}>
             <Ionicons name="ios-arrow-back" size={30} color="black" />
           </View>
         </TouchableOpacity>
-      </View>
-      <View>
-        <Ionicons name="ios-videocam" size={30} color="black" />
+        {/* // Account Name Displayed here: dynamic depending account thats signed in */}
+        {/* // Pop-up when click on it: shows account name, followers, add close friends buttons */}
+        <View style={styles.dropDownContainer}>
+          <Text> Account Name</Text>
+          <TouchableOpacity onPress={() => console.log("Hi")}>
+            <Ionicons name="ios-arrow-down" size={20} color="black" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.rightSideIcons}>
+          <View style={styles.video}>
+            <Ionicons name="ios-videocam" size={30} color="black" />
           </View>
-          <View>
-        <Ionicons name="md-clipboard" size={30} color="black" />
+          <View style={styles.message}>
+            <Ionicons name="md-clipboard" size={30} color="black" />
+          </View>
+        </View>
       </View>
+      {/* <View>
+          <Ionicons name="ios-videocam" size={30} color="black" />
+        </View>
+        <View>
+          <Ionicons name="md-clipboard" size={30} color="black" />
+        </View> */}
     </SafeAreaView>
   );
 }
@@ -36,6 +52,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+  },
+  messageContainer: {
+    backgroundColor: "yellow",
   },
 
   backContainer: {
@@ -47,9 +66,31 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
 
-  iconContainer: {
+  back: {
     alignSelf: "center",
     marginLeft: 20,
     marginTop: 15,
+  },
+  video: {
+    alignSelf: "center",
+  },
+
+  message: {
+    alignSelf: "center",
+  },
+
+  rightSideIcons: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: 100,
+    marginLeft: 50,
+  },
+
+  dropDownContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: 100,
   },
 });
