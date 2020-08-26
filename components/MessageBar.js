@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
   View,
   SafeAreaView,
   TouchableOpacity,
+  
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import AccountPopUp from "./AccountPopUp";
+import AccountPopUp from "./AccountPopUp"
 
 // This Component:
 // Component is only seen when user clicks on messages
 //
 
 export default function MessageBar({ navigation }) {
+  const [popUpOpen, setPopUpOpen] = useState(false);
+
+
+
   return (
     <SafeAreaView style={styles.container}>
+
+      {/* // MODAL COMPONENT  */}
+      
+      <AccountPopUp popUpOpen={popUpOpen} setPopUpOpen={setPopUpOpen} />
+      
+
+
       <View style={styles.backContainer}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <View style={styles.back}>
@@ -26,10 +38,15 @@ export default function MessageBar({ navigation }) {
         {/* // Pop-up when click on it: shows account name, followers, add close friends buttons */}
         <View style={styles.dropDownContainer}>
           <Text> Account Name</Text>
-          <TouchableOpacity onPress={() => console.log("Hi")}>
+          <TouchableOpacity
+            onPress={() =>
+              setPopUpOpen(true)
+            }
+          >
             <Ionicons name="ios-arrow-down" size={20} color="black" />
           </TouchableOpacity>
         </View>
+
         <View style={styles.rightSideIcons}>
           <View style={styles.video}>
             <Ionicons name="ios-videocam" size={30} color="black" />
@@ -40,7 +57,7 @@ export default function MessageBar({ navigation }) {
         </View>
       </View>
 
-      <AccountPopUp />
+      {/* <AccountPopUp /> */}
     </SafeAreaView>
   );
 }
@@ -85,9 +102,12 @@ const styles = StyleSheet.create({
   },
 
   dropDownContainer: {
-    display: "flex",
     flexDirection: "row",
-    alignItems: "center",
     marginLeft: 100,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
+
+  
 });
