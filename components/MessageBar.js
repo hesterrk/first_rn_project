@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import AccountPopUp from "./AccountPopUp";
 
 // This Component:
 // Component is only seen when user clicks on messages
@@ -34,16 +35,12 @@ export default function MessageBar({ navigation }) {
             <Ionicons name="ios-videocam" size={30} color="black" />
           </View>
           <View style={styles.message}>
-            <Ionicons name="md-clipboard" size={30} color="black" />
+            <Ionicons name="ios-create" size={30} color="black" />
           </View>
         </View>
       </View>
-      {/* <View>
-          <Ionicons name="ios-videocam" size={30} color="black" />
-        </View>
-        <View>
-          <Ionicons name="md-clipboard" size={30} color="black" />
-        </View> */}
+
+      <AccountPopUp />
     </SafeAreaView>
   );
 }
