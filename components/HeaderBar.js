@@ -22,7 +22,7 @@ export default function HeaderBar({ navigation }) {
           <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
         </View>
         <View style={styles.mainTextContainer}>
-          <Text style={styles.mainTitle}>Rea-Nat-Insta</Text>
+          <Text style={styles.mainTitle}> Native Insta</Text>
         </View>
         {/* Need an Onlick here to render MessageContainer component */}
         <TouchableOpacity onPress={() => navigation.navigate("MessageBar")}>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   mainTextContainer: {
-    marginLeft: 80,
+    marginLeft: 90,
     alignSelf: "center",
   },
   imageContainer: {
