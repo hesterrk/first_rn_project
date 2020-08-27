@@ -26,9 +26,6 @@ export default function MessageBar({ navigation }) {
         {/* // Account Name Displayed here: dynamic depending account thats signed in */}
         {/* // Pop-up when click on it: shows account name, followers, add close friends buttons */}
 
-        {/* // MODAL COMPONENT  */}
-        {/* <AccountPopUp popUpOpen={popUpOpen} setPopUpOpen={setPopUpOpen} /> */}
-
         <View style={styles.dropDownContainer}>
           <Text> Account Name</Text>
           <TouchableOpacity onPress={() => setPopUpOpen(true)}>
@@ -49,8 +46,6 @@ export default function MessageBar({ navigation }) {
           </View>
         </View>
       </View>
-
-      {/* <AccountPopUp /> */}
     </SafeAreaView>
   );
 }

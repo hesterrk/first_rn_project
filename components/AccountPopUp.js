@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import {
   StyleSheet,
   View,
@@ -42,7 +42,7 @@ export default function AccountPopUp({ popUpOpen, setPopUpOpen }) {
 
             <View style={styles.buttonContainer}>
               <View style={styles.popUpButton}>
-                {/* // Show dynamic number of followers! */}
+                {/*  Show dynamic number of followers! */}
                 <Button title="Followers" color="black" />
               </View>
               <View style={styles.popUpButton}>
