@@ -11,17 +11,13 @@ import AccountPopUp from "./AccountPopUp";
 
 // This Component:
 // Component is only seen when user clicks on messages
-//
 
 export default function MessageBar({ navigation }) {
   const [popUpOpen, setPopUpOpen] = useState(false);
 
   return (
-         
     <SafeAreaView style={styles.container}>
-    
       <View style={styles.backContainer}>
-        
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <View style={styles.back}>
             <Ionicons name="ios-arrow-back" size={30} color="black" />
@@ -29,13 +25,13 @@ export default function MessageBar({ navigation }) {
         </TouchableOpacity>
         {/* // Account Name Displayed here: dynamic depending account thats signed in */}
         {/* // Pop-up when click on it: shows account name, followers, add close friends buttons */}
-       
+
         {/* // MODAL COMPONENT  */}
         {/* <AccountPopUp popUpOpen={popUpOpen} setPopUpOpen={setPopUpOpen} /> */}
 
         <View style={styles.dropDownContainer}>
           <Text> Account Name</Text>
-          <TouchableOpacity onPress={() => setPopUpOpen(true) }>
+          <TouchableOpacity onPress={() => setPopUpOpen(true)}>
             <Ionicons name="ios-arrow-down" size={20} color="black" />
           </TouchableOpacity>
 
