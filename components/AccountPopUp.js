@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     borderColor: "lightgrey",
     borderRadius: 5,
     width: "40%",
+    textAlign: 'center'
   },
   accountDisplay: {
     display: "flex",
