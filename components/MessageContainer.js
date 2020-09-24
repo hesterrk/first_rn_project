@@ -1,5 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, SafeAreaView } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
+import { Card } from 'react-native-elements'
+
 
 // ToDo:
 // Component is the structure for Direct Messages-style
@@ -9,7 +11,12 @@ import { StyleSheet, Text, SafeAreaView } from "react-native";
 export default function MessageContainer() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text> M Container </Text>
+      <View>
+        <Card>
+          
+        </Card>
+
+      </View>
     </SafeAreaView>
   );
 }
