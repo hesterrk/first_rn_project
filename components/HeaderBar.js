@@ -16,29 +16,29 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function HeaderBar({ navigation }) {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.titleContainer}>
-        <View style={styles.imageContainer}>
-          <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
-        </View>
-        <View style={styles.mainTextContainer}>
-          <Text style={styles.mainTitle}> Native Insta</Text>
-        </View>
-        {/* Need an Onlick here to render MessageContainer component */}
-        <TouchableOpacity onPress={() => navigation.navigate("MessageBar")}>
-          <View style={styles.iconContainer}>
-            <Ionicons name="md-send" size={30} color="black" />
-          </View>
-        </TouchableOpacity>
+    // <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.titleContainer}>
+      <View style={styles.imageContainer}>
+        <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
       </View>
+      <View style={styles.mainTextContainer}>
+        <Text style={styles.mainTitle}> Native Insta</Text>
+      </View>
+      {/* Need an Onlick here to render MessageContainer component */}
+      <TouchableOpacity onPress={() => navigation.navigate("MessageBar")}>
+        <View style={styles.iconContainer}>
+          <Ionicons name="md-send" size={30} color="black" />
+        </View>
+      </TouchableOpacity>
     </SafeAreaView>
+    // </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "lavender",
   },
   logo: {
     width: 65,
@@ -49,23 +49,25 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   titleContainer: {
-    backgroundColor: "#F7F8F8",
+    display: "flex",
+    // backgroundColor: "#F7F8F8",
+    backgroundColor: "white",
     flexDirection: "row",
     // Fixed border
-    height: 65,
     borderBottomColor: "#D7DDE8",
     borderBottomWidth: 1,
+    width: "100%",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   mainTextContainer: {
-    marginLeft: 90,
     alignSelf: "center",
   },
   imageContainer: {
-    paddingLeft: 10,
+    paddingLeft: 5,
   },
   iconContainer: {
     alignSelf: "center",
-    marginLeft: 90,
-    marginTop: 15,
+    paddingRight: 5,
   },
 });

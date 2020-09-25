@@ -11,10 +11,9 @@ export default function MessageContainer() {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        {/* <Card>
-          <Card.Title> {username} </Card.Title>
-        </Card> */}
-        <Text> Hi </Text>
+        <Card>
+          <Card.Title>Username </Card.Title>
+        </Card>
       </View>
     </SafeAreaView>
   );

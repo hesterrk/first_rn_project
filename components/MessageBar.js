@@ -46,7 +46,6 @@ export default function MessageBar({ navigation }) {
           </View>
         </View>
       </View>
-
     </SafeAreaView>
   );
 }
@@ -55,9 +54,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-  },
-  messageContainer: {
-    backgroundColor: "yellow",
   },
 
   backContainer: {
