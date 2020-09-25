@@ -26,6 +26,8 @@ This purpose of this app is for a user to simulate some key instagram-like exper
 
 -CSS
 
+-React-Native-Elements
+
 # WishList
 
 -Re-create the entire functionality of Instragram, such as:
