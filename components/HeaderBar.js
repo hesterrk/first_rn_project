@@ -36,10 +36,10 @@ export default function HeaderBar({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "lavender",
-  },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor: "lavender",
+  // },
   logo: {
     width: 65,
     height: 65,
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "space-between",
     alignItems: "center",
+    height: 120,
   },
   mainTextContainer: {
     alignSelf: "center",
