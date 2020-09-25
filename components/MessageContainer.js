@@ -13,7 +13,7 @@ export default function MessageContainer() {
     <SafeAreaView style={styles.container}>
       <View>
         <Card>
-          
+          <Card.Title> {username} </Card.Title>
         </Card>
 
       </View>
