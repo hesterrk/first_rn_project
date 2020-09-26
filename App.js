@@ -4,7 +4,7 @@ import HeaderBar from "./components/HeaderBar";
 import MessageBar from "./components/MessageBar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-
+import NewsFeedContainer from "./components/NewsfeedContainer";
 
 const Stack = createStackNavigator();
 
@@ -18,8 +18,8 @@ export default function App() {
       >
         {/* // header bar renders first */}
         <Stack.Screen name="HeaderBar" component={HeaderBar} />
+        <Stack.Screen name="NewsFeedContainer" component={NewsFeedContainer} />
         <Stack.Screen name="MessageBar" component={MessageBar} />
-
       </Stack.Navigator>
     </NavigationContainer>
   );
