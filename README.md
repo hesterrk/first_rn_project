@@ -33,3 +33,4 @@ This purpose of this app is for a user to simulate some key instagram-like exper
 -Re-create the entire functionality of Instragram, such as:
 --ability to send/recieve messages
 --ability to open up the camera on your phone and take a picture and upload onto the app
+-- Add detection for orientation change 
