@@ -5,10 +5,11 @@ import { Card } from "react-native-elements";
 export default function NewsFeedContainer() {
   return (
     <SafeAreaView style={styles.container}>
-      <Card>
-        <Card.Title>Username </Card.Title>
+      <Card style={styles.card}>
+        <Card.Title> Username </Card.Title>
+        <Card.Divider />
       </Card>
-      <Text> HIIIII </Text>
+      <Text> NewsFeed Container </Text>
     </SafeAreaView>
   );
 }
@@ -16,5 +17,11 @@ export default function NewsFeedContainer() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "red",
+  },
+  card: {
+    "&:hover": {
+      boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
+    },
+    borderRadius: 10,
   },
 });

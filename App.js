@@ -10,6 +10,7 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
+    <NewsFeedContainer />
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
@@ -18,7 +19,6 @@ export default function App() {
       >
         {/* // header bar renders first */}
         <Stack.Screen name="HeaderBar" component={HeaderBar} />
-        <Stack.Screen name="NewsFeedContainer" component={NewsFeedContainer} />
         <Stack.Screen name="MessageBar" component={MessageBar} />
       </Stack.Navigator>
     </NavigationContainer>
