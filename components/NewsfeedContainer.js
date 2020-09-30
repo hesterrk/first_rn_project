@@ -1,16 +1,13 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { Card } from "react-native-elements";
 import HeaderBar from "./HeaderBar";
+import Post from "./Post";
 
-export default function NewsFeedContainer({navigation}) {
+export default function NewsFeedContainer({ navigation }) {
   return (
     <View style={styles.container}>
       <HeaderBar navigation={navigation} />
-      <Card style={styles.card}>
-        <Card.Title> Post </Card.Title>
-        <Card.Divider />
-      </Card>
+      <Post />
     </View>
   );
 }
