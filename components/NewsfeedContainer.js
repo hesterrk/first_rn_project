@@ -10,7 +10,7 @@ export default function NewsFeedContainer({ navigation }) {
       <HeaderBar navigation={navigation} />
 
       {users.map((user, i) => {
-          return <Post user={user}/>;
+        return <Post user={user} />;
       })}
     </View>
   );
@@ -18,7 +18,7 @@ export default function NewsFeedContainer({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#E4E5E6",
+    backgroundColor: "white",
     flex: 1,
   },
 });

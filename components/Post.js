@@ -5,7 +5,7 @@ import { Card } from "react-native-elements";
 export default function Post({ user }) {
   return (
     <View>
-      <Card style={styles.card}>
+      <Card containerStyle={{ backgroundColor: "#ECE9E6" }}>
         <Card.Title> {user.name} </Card.Title>
         <Card.Divider />
       </Card>
@@ -13,8 +13,6 @@ export default function Post({ user }) {
   );
 }
 
-const styles = StyleSheet.create({
-  card: {
-    backgroundColor: "purple",
-  },
-});
+// const styles = StyleSheet.create({
+
+// });
