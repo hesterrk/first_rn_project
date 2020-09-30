@@ -34,7 +34,6 @@ export default function HeaderBar({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-
   logo: {
     width: 65,
     height: 65,

@@ -17,7 +17,7 @@ export default function NewsFeedContainer({navigation}) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "lightgrey",
+    backgroundColor: "#E4E5E6",
     flex: 1,
   },
 });
