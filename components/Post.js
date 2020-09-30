@@ -8,15 +8,9 @@ export default function Post() {
       <Card style={styles.card}>
         <Card.Title> Post </Card.Title>
         <Card.Divider />
+        <Card.FeaturedSubtitle> hi </Card.FeaturedSubtitle>
       </Card>
-      <Card style={styles.card}>
-        <Card.Title> Post </Card.Title>
-        <Card.Divider />
-      </Card>
-      <Card style={styles.card}>
-        <Card.Title> Post </Card.Title>
-        <Card.Divider />
-      </Card>
+     
     </View>
   );
 }
