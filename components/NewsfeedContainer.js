@@ -1,27 +1,23 @@
 import React from "react";
-import { StyleSheet, SafeAreaView } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Card } from "react-native-elements";
+import HeaderBar from "./HeaderBar";
 
-export default function NewsFeedContainer() {
+export default function NewsFeedContainer({navigation}) {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
+      <HeaderBar navigation={navigation} />
       <Card style={styles.card}>
-        <Card.Title> Username </Card.Title>
+        <Card.Title> Post </Card.Title>
         <Card.Divider />
       </Card>
-      <Text> NewsFeed Container </Text>
-    </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "red",
-  },
-  card: {
-    "&:hover": {
-      boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
-    },
-    borderRadius: 10,
+    backgroundColor: "lightgrey",
+    flex: 1,
   },
 });

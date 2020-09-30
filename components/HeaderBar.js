@@ -16,7 +16,6 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function HeaderBar({ navigation }) {
   return (
-    // <SafeAreaView style={styles.container}>
     <SafeAreaView style={styles.titleContainer}>
       <View style={styles.imageContainer}>
         <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
@@ -31,15 +30,11 @@ export default function HeaderBar({ navigation }) {
         </View>
       </TouchableOpacity>
     </SafeAreaView>
-    // </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: "lavender",
-  // },
+
   logo: {
     width: 65,
     height: 65,
