@@ -8,9 +8,10 @@ export default function NewsFeedContainer({ navigation }) {
   return (
     <View style={styles.container}>
       <HeaderBar navigation={navigation} />
+
       <ScrollView>
         {users.map((user, i) => {
-          return <Post user={user} />;
+          return <Post user={user} key={i} />;
         })}
       </ScrollView>
     </View>
