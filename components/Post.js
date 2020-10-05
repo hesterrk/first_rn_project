@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Image, Dimensions } from "react-native";
 import { Card } from "react-native-elements";
+import { SimpleLineIcons } from "@expo/vector-icons";
 
 const deviceWidth = Dimensions.get("window").width;
 
@@ -12,6 +13,9 @@ export default function Post({ user }) {
         <Card.Divider />
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={require("../mockPic.jpg")} />
+        </View>
+        <View style={styles.iconContainer}>
+          <SimpleLineIcons name="heart" size={24} color="black" />
         </View>
       </Card>
     </View>
@@ -31,5 +35,9 @@ const styles = StyleSheet.create({
     marginRight: "auto",
     height: deviceWidth * 0.8,
     width: deviceWidth * 0.8,
+  },
+
+  iconContainer: {
+    paddingTop: 10,
   },
 });

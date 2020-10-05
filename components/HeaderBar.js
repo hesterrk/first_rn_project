@@ -4,10 +4,9 @@ import {
   Text,
   View,
   SafeAreaView,
-  Image,
   TouchableOpacity,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, Fontisto, SimpleLineIcons } from "@expo/vector-icons";
 
 //ToDo on component:
 // This component needs to stay in user's sight as they scroll down the app like Instagram
@@ -17,11 +16,11 @@ import { Ionicons } from "@expo/vector-icons";
 export default function HeaderBar({ navigation }) {
   return (
     <SafeAreaView style={styles.titleContainer}>
-      <View style={styles.imageContainer}>
-        <Image style={styles.logo} source={require("../assets/logo.jpeg")} />
+      <View style={styles.cameraIconContainer}>
+        <SimpleLineIcons name="camera" size={30} color="black" />
       </View>
       <View style={styles.mainTextContainer}>
-        <Text style={styles.mainTitle}> Native Insta</Text>
+        <Fontisto name="instagram" size={40} color="black" />
       </View>
       {/* Need an Onlick here to render MessageContainer component */}
       <TouchableOpacity onPress={() => navigation.navigate("MessageBar")}>
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
   mainTextContainer: {
     alignSelf: "center",
   },
-  imageContainer: {
+  cameraIconContainer: {
     paddingLeft: 5,
   },
   iconContainer: {
