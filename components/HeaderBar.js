@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from "react-native";
-import { Ionicons, Fontisto, SimpleLineIcons } from "@expo/vector-icons";
+import { Fontisto, SimpleLineIcons } from "@expo/vector-icons";
 
 //ToDo on component:
 // This component needs to stay in user's sight as they scroll down the app like Instagram
@@ -25,7 +25,7 @@ export default function HeaderBar({ navigation }) {
       {/* Need an Onlick here to render MessageContainer component */}
       <TouchableOpacity onPress={() => navigation.navigate("MessageBar")}>
         <View style={styles.iconContainer}>
-          <Ionicons name="md-send" size={30} color="black" />
+          <SimpleLineIcons name="paper-plane" size={30} color="black" />
         </View>
       </TouchableOpacity>
     </SafeAreaView>
