@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleSheet, View, Image, Dimensions } from "react-native";
+import { StyleSheet, View, Image, Dimensions, Text } from "react-native";
 import { Card } from "react-native-elements";
 import { SimpleLineIcons, FontAwesome, Feather } from "@expo/vector-icons";
 
 const deviceWidth = Dimensions.get("window").width;
 
-export default function Post({ user }) {
+export default function Post({ user, likePost, setLikePost }) {
   return (
     <View>
       <Card containerStyle={{ height: "auto" }}>
@@ -21,6 +21,7 @@ export default function Post({ user }) {
               size={24}
               color="black"
               style={styles.icon}
+              onPress={() => setLikePost(likePost + 1)}
             />
             <FontAwesome
               name="comment-o"
@@ -33,6 +34,9 @@ export default function Post({ user }) {
           <View>
             <Feather name="bookmark" size={24} color="black" />
           </View>
+        </View>
+        <View style={styles.commentContainer}>
+          <Text style={styles.likeText}> {likePost} likes </Text>
         </View>
       </Card>
     </View>
@@ -67,5 +71,11 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 15,
+  },
+  commentContainer: {
+    marginTop: 10,
+  },
+  likeText: {
+    fontWeight: "bold",
   },
 });
