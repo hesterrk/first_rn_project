@@ -1,6 +1,7 @@
 import "react-native-gesture-handler";
 import React from "react";
 import MessageBar from "./components/MessageBar";
+import MessageContainer from "./components/MessageContainer"
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import NewsFeedContainer from "./components/NewsfeedContainer";
@@ -16,7 +17,8 @@ export default function App() {
         }}
       >
         <Stack.Screen name="NewsFeedContainer" component={NewsFeedContainer} />
-        <Stack.Screen name="MessageBar" component={MessageBar} />
+        {/* <Stack.Screen name="MessageBar" component={MessageBar} /> */}
+        <Stack.Screen name="MessageContainer" component={MessageContainer} />
       </Stack.Navigator>
     </NavigationContainer>
   );

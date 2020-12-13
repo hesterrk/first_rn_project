@@ -23,7 +23,7 @@ export default function HeaderBar({ navigation }) {
         <Fontisto name="instagram" size={40} color="black" />
       </View>
       {/* Need an Onlick here to render MessageContainer component */}
-      <TouchableOpacity onPress={() => navigation.navigate("MessageBar")}>
+      <TouchableOpacity onPress={() => navigation.navigate("MessageContainer")}>
         <View style={styles.iconContainer}>
           <SimpleLineIcons name="paper-plane" size={30} color="black" />
         </View>

@@ -9,10 +9,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import AccountPopUp from "./AccountPopUp";
 
-// This Component:
-// Component is only seen when user clicks on messages
-
-export default function MessageBar({ navigation }) {
+export default function MessageBar({navigation}) {
   const [popUpOpen, setPopUpOpen] = useState(false);
 
   return (

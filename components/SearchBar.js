@@ -1,24 +1,22 @@
-import React from "react";
-import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import React, { useState} from "react";
+import { SearchBar } from 'react-native-elements';
+
 
 // Re-usable search bar for direct message, explore page, followers, following on profile
 
-export default function SearchBar() {
+export default function SearchBarComponent() {
+  const [search, setSearch] = useState('');
+
+  const updateSearch = (search) => {
+    setSearch({ search });
+  };
   return (
-    <View>
-      <TouchableOpacity>
-        <View style={styles.barContainer}>
-          <Ionicons name="md-search" size={20} color="black" />
-        </View>
-        <Text> HIIIII</Text>
-      </TouchableOpacity>
-    </View>
+    <SearchBar
+        placeholder="Type Here..."
+        onChangeText={updateSearch}
+        value={search}
+      />
   );
 }
 
-const styles = StyleSheet.create({
-  barContainer: {
-    backgroundColor: "red",
-  },
-});
+
