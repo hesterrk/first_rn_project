@@ -48,11 +48,6 @@ export default function MessageBar({navigation}) {
 }
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: "#fff",
-  // },
-
   backContainer: {
     backgroundColor: "#F7F8F8",
     flexDirection: "row",

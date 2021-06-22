@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     display: "flex",
-    // backgroundColor: "#F7F8F8",
     backgroundColor: "white",
     flexDirection: "row",
     // Fixed border
